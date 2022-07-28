@@ -7,7 +7,7 @@ app.unsubscribe(express.urlencoded({extended:true}));
 const { convertAndValidateNumsArray, mean, median, mode } = require('./functions');
 
 app.get('/mean', (req, res, next) => {
-
+    // http://localhost:3000/mean?nums=1,3,5,7
     let string = req.query.nums.split(',');
     // console.log(string)
     // ['1', '2', '3']

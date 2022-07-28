@@ -6,7 +6,7 @@ const {
 
 describe("#mean", function() {
     it ("finds the mean of an array", function(){
-        expect(mean([1,2,3,4,10])).toEqual(20)
+        expect(mean([1,2,3,4,10])).toEqual(4)
     })
 })
 describe("#median", function() {
@@ -18,10 +18,7 @@ describe("#median", function() {
     })
 })
 describe("#mode", function() {
-    it ("finds the mode of an even array", function(){
-        expect(mode([2,4,6,8])).toEqual(5)
-    })
-    it ("finds the mode of an odd array", function(){
-        expect(mode([4,6,8])).toEqual(6)
+    it ("finds the mode", function(){
+        expect(mode([2,4,4,8])).toEqual(4)
     })
 })

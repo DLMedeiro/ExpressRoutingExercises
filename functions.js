@@ -15,21 +15,23 @@ function convertAndValidateNumsArray(string){
 }
 
 
-let sum = 0
-let count = 0
 function mean(arr) {
+    let sum = 0
     for (let i = 0; i < arr.length; i++){
         sum += arr[i]
-        count += 1
     }
-    let mean = sum / count
+    let mean = sum / arr.length
+    console.log(arr.length)
     return mean
 }
+mean([1,2,3,4,10])
+
 function median(nums) {
+    [2,4,6,8]
     let sortedArr = nums.sort(function(a,b){return a-b})
     let midpoint = (sortedArr.length / 2)
     if (midpoint % 2 == 0) {
-        let median = (midpoint + (midpoint + 1)) / 2
+        let median = (sortedArr[midpoint] + (sortedArr[midpoint-1])) / 2
         return median
     } else {
         let median = sortedArr[Math.floor(midpoint)]
